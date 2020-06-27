@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuDas</title>
+</head>
+<body>
+    <script>
+        function desconto(valorCompra) {
+            let valorTotal;
+            if (valorCompra > 0 && valorCompra <= 499.99) {
+                valorTotal = valorCompra - (valorCompra * .1);
+                return (`O valor do desconto é de 10% e gerou um abatimento no valor de R$${valorCompra * .1}.<br>O valor total da compra é de R$${valorTotal}<br><br>`);
+            } else if (valorCompra > 499.99) {
+                valorTotal = valorCompra - (valorCompra * .15);
+                return (`O valor do desconto é de 15% e gerou um abatimento no valor de R$${valorCompra * .15}.<br>O valor total da compra é de R$${valorTotal}<br><br>`);
+            } else {
+                window.alert('Valor inválido');
+            }
+        };
+
+        let minhaCompra = desconto(100);
+        let outraCompra = desconto(1000);
+        document.write(minhaCompra);
+        document.write(outraCompra);
+    </script>
+</body>
+</html>
